@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* RESETS */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font: 62.5% / 1.15 sans-serif;
+  }
+  
+  h1,
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+  }
+  
+  button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+  
+  button,
+  input {
+    overflow: visible;
+  }
+  
+  input[type="text"] {
+    border-radius: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    width: 100%;
+    margin: 0 auto;
+    font: 1.6rem/1.25 Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #4d4d4d;
+  }
+  
+  @media screen and (min-width: 620px) {
+    body {
+      font-size: 1.9rem;
+      line-height: 1.31579;
+    }
+  }
+  
+  /*END RESETS*/
+  /* GLOBAL STYLES */
+  .btn {
+    padding: 0.8rem 1rem 0.7rem;
+    border: 0.2rem solid #4d4d4d;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  .btn-return {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background-color: darkblue;
+    color: white;
+    width: 100%!important;
+  }
+  
+  .btn-return:hover {
+    background-color: rgb(76, 76, 212);
+  }
+  
+  .btn__primary {
+    color: #fff;
+    background-color: #000;
+  }
+  
+  .btn__danger {
+    color: #fff;
+    background-color: #ca3c3c;
+    border-color: #bd2130;
+  }
+  
+  .input__lg {
+    padding: 2rem;
+    border: 2px solid #000;
+  }
+  
+  .input__lg:focus {
+    border-color: #4d4d4d;
+    box-shadow: inset 0 0 0 2px;
+  }
+  [class*="__lg"] {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.9rem;
+  }
+  [class*="__lg"]:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  .label-wrapper {
+    margin: 0;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  
+  [class*="stack"]>* {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .stack-small>*+* {
+    margin-top: 1.25rem;
+  }
+  
+  .stack-large>*+* {
+    margin-top: 2.5rem;
+  }
+  
+  @media screen and (min-width: 550px) {
+    .stack-small>*+* {
+      margin-top: 1.4rem;
+    }
+  
+    .stack-large>*+* {
+      margin-top: 2.8rem;
+    }
+  }
+  
+  .stack-exception {
+    margin-top: 1.2rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* END GLOBAL STYLES */
+  
+  /* Main-container */
+  
+  .main-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    position: absolute;
+    width: fit-content;
+  }
+  
+  .App,
+  .basic-container {
+    margin-top: 2rem;
+  }
+  
+  .form-container,
+  .basic-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .basic-container {
+    padding: 1rem;
+  }
+  
+  .basic-container *,
+  .form-container form,
+  .form-container ul {
+    width: 60%;
+  }
+  
+  /* To do */
+  
+  .todo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .todo>* {
+    flex: 0 0 100%;
+  }
+  
+  /* CHECKBOX STYLES */
+  
+  .c-cb {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    display: block;
+    position: relative;
+    min-height: 44px;
+    clear: left;
+  }
+  .c-cb > label::before,
+  .c-cb > input[type="checkbox"] {
+    box-sizing: border-box;
+    top: 0px;
+    left: 0px;
+    width: 44px;
+    height: 44px;
+  }
+  .c-cb > input[type="checkbox"] {
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    z-index: 1;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .c-cb > label::before {
+    content: "";
+    position: absolute;
+    border: 2px solid currentColor;
+    background: transparent;
+  }
+  
+  .c-cb > label::after {
+    box-sizing: content-box;
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    width: 18px;
+    height: 7px;
+    transform: rotate(-45deg);
+    border: solid;
+    border-width: 0 0 5px 5px;
+    border-top-color: transparent;
+    opacity: 0;
+    background: transparent;
+  }
+  .c-cb > input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+  
+  .c-cb>label {
+    border: 3px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 8px 15px 5px;
+    touch-action: manipulation;
+    cursor: pointer;
+  }
+  
+  .todo-label.true {
+    text-decoration: line-through;
+    font-style: italic;
+    border: 3px solid grey;
+    color: grey;
+  }
+  
+  /* Burger */
+  
+  .sidebarBurger {
+    padding: 0.5rem 4rem;
+  }
+  
+  .sidebarBurger .burger:hover {
+    cursor: pointer;
+  }
+  
+  .burger.clicked {
+    opacity: 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .sidebar a:hover, 
+  .sidebar button .close:hover  {
+    color: rgb(228, 60, 60);
+    cursor: pointer;
+  }
+  
+  .sidebar button {
+    width: 100%;
+  }
+  
+  .sidebar button .close {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sidebar ul li {
+    padding-top: 0.5rem;
+  }
+  
+  .sidebar div[style*="width: 220px"] {
+    height: 100vh;
+    background-color: white;
+    box-shadow: rgba(17, 12, 26, 0.15) 0px 48px 50px 0px;
+    z-index: 1001; 
+  }
